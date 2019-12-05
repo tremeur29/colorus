@@ -2,6 +2,13 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+touch ~/.colourvars
+echo LINE1=239 > ~/.colourvars
+echo LINE2=239 >> ~/.colourvars
+echo LINE3=239 >> ~/.colourvars
+echo LINE4=239 >> ~/.colourvars
+echo LINE5=239 >> ~/.colourvars
+
 c1=$(sed '2!d' ~/.cache/wal/colors)
 line1=$(python3 ${DIR}/colours.py ${c1}[1:])
 touch ${DIR}/var.txt
